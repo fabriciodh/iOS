@@ -7,12 +7,40 @@
 //
 
 #import "ViewController.h"
+#import "Posto.h"	
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+-(UIViewController *)initWithCoder: (NSCoder *) aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self){
+        UIBarButtonItem *botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action: @selector(adiciona)];
+        self.navigationItem.rightBarButtonItem = botao;
+        self.navigationItem.title = @"Novo Posto";
+
+    }
+    return self;
+}
+
+-(void) adiciona {
+    Posto *posto = [Posto new];
+    posto.nome_posto = self.nome_posto.text;
+    posto.bandeira_posto = self.bandeira_posto.text;
+    posto.endereco_posto = self.endereco_posto.text;
+    posto.preco_gasolina = self.preco_gasolina.text;
+    posto.preco_diesel = self.preco_diesel.text;
+    posto.preco_etanol = self.preco_etanol.text;
+    [self.listaPostos addObject:posto];
+    
+    NSLog(@"%@", self.listaPostos);
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
