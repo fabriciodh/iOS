@@ -27,8 +27,8 @@
     
     self.navigationItem.rightBarButtonItem = botaoAdd;
     self.navigationItem.title = @"Postos de Combustíveis";
-        
-    self.listaPostos = [NSMutableArray new];
+    self.dao = [PostoDAO postoDaoInstance];
+
         
     }
     return self;
@@ -39,7 +39,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ViewController *form = [storyboard instantiateViewControllerWithIdentifier:@"FormPosto"];
     
-    form.listaPostos = self.listaPostos;
+    form.dao= self.dao;
     
     [self.navigationController pushViewController:form animated:YES];
     
@@ -72,14 +72,21 @@
 //}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.listaPostos.count;
+    return [self.dao total];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     
-    Posto *posto = self.listaPostos[indexPath.row];
+    NSString *identificador = @"Celula";
+    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identificador];
+    
+    if (!cell){
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identificador];
+    }
+    Posto *posto = [self.dao postoIndice :indexPath.row];
     cell.textLabel.text = posto.nome_posto;
     
     return cell;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FA227031DDD04B000A56974 /* PostoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA227021DDD04B000A56974 /* PostoDAO.m */; };
 		7FE3F6C71DDB634F00B165F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3F6C61DDB634F00B165F0 /* main.m */; };
 		7FE3F6CA1DDB634F00B165F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3F6C91DDB634F00B165F0 /* AppDelegate.m */; };
 		7FE3F6CD1DDB634F00B165F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3F6CC1DDB634F00B165F0 /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FA227011DDD04AF00A56974 /* PostoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostoDAO.h; sourceTree = "<group>"; };
+		7FA227021DDD04B000A56974 /* PostoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostoDAO.m; sourceTree = "<group>"; };
 		7FE3F6C21DDB634F00B165F0 /* Postos Combustíveis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Postos Combustíveis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE3F6C61DDB634F00B165F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FE3F6C81DDB634F00B165F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				7FE3F6D91DDB634F00B165F0 /* Info.plist */,
 				7FE3F6D11DDB634F00B165F0 /* Postos_Combusti_veis.xcdatamodeld */,
 				7FE3F6C51DDB634F00B165F0 /* Supporting Files */,
+				7FA227011DDD04AF00A56974 /* PostoDAO.h */,
+				7FA227021DDD04B000A56974 /* PostoDAO.m */,
 			);
 			path = "Postos Combustíveis";
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				7FE3F6D31DDB634F00B165F0 /* Postos_Combusti_veis.xcdatamodeld in Sources */,
 				7FE3F6E71DDB89C300B165F0 /* ListaPostosTableViewController.m in Sources */,
 				7FE3F6CD1DDB634F00B165F0 /* ViewController.m in Sources */,
+				7FA227031DDD04B000A56974 /* PostoDAO.m in Sources */,
 				7FE3F6CA1DDB634F00B165F0 /* AppDelegate.m in Sources */,
 				7FE3F6C71DDB634F00B165F0 /* main.m in Sources */,
 			);
@@ -342,6 +348,7 @@
 				7FE3F6DE1DDB634F00B165F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

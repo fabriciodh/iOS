@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PostoDAO.h"
 
 @interface ViewController : UIViewController
-@property NSMutableArray *listaPostos;
 
 @property IBOutlet UITextField *nome_posto;
 @property IBOutlet UITextField *endereco_posto;
@@ -19,6 +18,7 @@
 @property IBOutlet UITextField *preco_etanol;
 @property IBOutlet UITextField *preco_diesel;
 
+@property PostoDAO *dao;
 
 @end
 

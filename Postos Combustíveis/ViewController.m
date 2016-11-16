@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Posto.h"	
 
+
 @interface ViewController ()
 
 @end
@@ -21,6 +22,7 @@
         UIBarButtonItem *botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action: @selector(adiciona)];
         self.navigationItem.rightBarButtonItem = botao;
         self.navigationItem.title = @"Novo Posto";
+        self.dao = [PostoDAO postoDaoInstance];
 
     }
     return self;
@@ -34,9 +36,10 @@
     posto.preco_gasolina = self.preco_gasolina.text;
     posto.preco_diesel = self.preco_diesel.text;
     posto.preco_etanol = self.preco_etanol.text;
-    [self.listaPostos addObject:posto];
     
-    NSLog(@"%@", self.listaPostos);
+    [self.dao adicionaPosto:posto];
+    
+    NSLog(@"%@", self.dao.listaPostos);
     
     [self.navigationController popViewControllerAnimated:YES];
     
