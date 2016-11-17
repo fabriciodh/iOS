@@ -19,35 +19,57 @@
 -(UIViewController *)initWithCoder: (NSCoder *) aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self){
-        UIBarButtonItem *botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action: @selector(adiciona)];
-        self.navigationItem.rightBarButtonItem = botao;
-        self.navigationItem.title = @"Novo Posto";
+       
+        
         self.dao = [PostoDAO postoDaoInstance];
-
+        
     }
     return self;
 }
 
 -(void) adiciona {
-    Posto *posto = [Posto new];
-    posto.nome_posto = self.nome_posto.text;
-    posto.bandeira_posto = self.bandeira_posto.text;
-    posto.endereco_posto = self.endereco_posto.text;
-    posto.preco_gasolina = self.preco_gasolina.text;
-    posto.preco_diesel = self.preco_diesel.text;
-    posto.preco_etanol = self.preco_etanol.text;
+    self.posto = [Posto new];
+    [self pegaDadosFormulario];
     
-    [self.dao adicionaPosto:posto];
+    [self.dao adicionaPosto:self.posto];
     
-    NSLog(@"%@", self.dao.listaPostos);
     
     [self.navigationController popViewControllerAnimated:YES];
     
 }
+-(void) altera{
+    [self pegaDadosFormulario];
+    [self.navigationController popViewControllerAnimated:YES];}
+
+-(void) pegaDadosFormulario {
+    self.posto.nome_posto = self.nome_posto.text;
+    self.posto.bandeira_posto = self.bandeira_posto.text;
+    self.posto.endereco_posto = self.endereco_posto.text;
+    self.posto.preco_gasolina= self.preco_gasolina.text;
+    self.posto.preco_diesel = self.preco_diesel.text;
+    self.posto.preco_etanol = self.preco_etanol.text;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIBarButtonItem *botao = nil;
+    if (self.posto){
+        botao = [[UIBarButtonItem alloc] initWithTitle:@"Alterar" style:UIBarButtonItemStylePlain target:self action: @selector(altera)];
+        self.navigationItem.title = @"Altera Posto";
+    } else {
+        botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action: @selector(adiciona)];
+        self.navigationItem.title = @"Novo Posto";
+    }
+    self.navigationItem.rightBarButtonItem = botao;
+    
+    if (self.posto){
+    self.nome_posto.text = self.posto.nome_posto;
+    self.bandeira_posto.text = self.posto.bandeira_posto;
+    self.endereco_posto.text = self.posto.endereco_posto;
+    self.preco_diesel.text = self.posto.preco_diesel;
+    self.preco_etanol.text = self.posto.preco_etanol;
+    self.preco_gasolina.text = self.posto.preco_gasolina;
+    }
 }
 
 

@@ -26,6 +26,7 @@
     UIBarButtonItem *botaoAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target:self action:@selector(exibeFormulario)];
     
     self.navigationItem.rightBarButtonItem = botaoAdd;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"Postos de Combustíveis";
     self.dao = [PostoDAO postoDaoInstance];
 
@@ -33,19 +34,17 @@
     }
     return self;
 }
-
--(void) exibeFormulario {
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ViewController *form = [storyboard instantiateViewControllerWithIdentifier:@"FormPosto"];
-    
-    form.dao= self.dao;
-    
-    [self.navigationController pushViewController:form animated:YES];
-    
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete){
+        
+        Posto *posto = [self.dao postoIndice:indexPath.row];
+        
+        [self.dao removePosto: posto];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath]withRowAnimation:UITableViewRowAnimationFade];
+        
+    }
 }
 
-  
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -91,27 +90,25 @@
     
     return cell;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.postoSelecionado = [self.dao postoIndice:indexPath.row];
+    [self exibeFormulario];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(void) exibeFormulario {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ViewController *form = [storyboard instantiateViewControllerWithIdentifier:@"FormPosto"];
+    
+    if (self.postoSelecionado){
+        form.posto = self.postoSelecionado;
+    }
+    
+    self.postoSelecionado = nil;
+    
+    [self.navigationController pushViewController:form animated:YES];
+    
 }
-*/
 
 /*
 // Override to support rearranging the table view.

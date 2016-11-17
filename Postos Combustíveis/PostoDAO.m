@@ -36,4 +36,8 @@ static PostoDAO *defaultDao = nil;
 -(Posto *)postoIndice:(NSInteger) indice{
     return self.listaPostos[indice];
 }
+
+-(void)removePosto:(Posto *)posto{
+    [self.listaPostos removeObject:posto];
+}
 @end

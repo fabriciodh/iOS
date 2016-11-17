@@ -17,5 +17,6 @@
 -(NSInteger) total;
 -(Posto *) postoIndice: (NSInteger) indice;
 +(PostoDAO *) postoDaoInstance;
+-(void) removePosto: (Posto *) posto;
 
 @end

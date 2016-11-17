@@ -14,5 +14,6 @@
 @property NSMutableArray *postos;
 
 @property PostoDAO *dao;
+@property Posto *postoSelecionado;
 
 @end

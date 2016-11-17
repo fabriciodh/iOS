@@ -17,6 +17,7 @@
 @property IBOutlet UITextField *preco_gasolina;
 @property IBOutlet UITextField *preco_etanol;
 @property IBOutlet UITextField *preco_diesel;
+@property Posto *posto;
 
 @property PostoDAO *dao;
 
