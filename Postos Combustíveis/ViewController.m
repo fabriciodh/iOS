@@ -42,33 +42,41 @@
     [self.navigationController popViewControllerAnimated:YES];}
 
 -(void) pegaDadosFormulario {
+    self.posto.preco_gasolina_comum = self.preco_gasolina_comum.text;
+    self.posto.preco_gasolina_aditivada = self.preco_gasolina_aditivada.text;
+    self.posto.preco_etanol = self.preco_etanol.text;
+    self.posto.preco_diesel = self.preco_diesel.text;
     self.posto.nome_posto = self.nome_posto.text;
     self.posto.bandeira_posto = self.bandeira_posto.text;
     self.posto.endereco_posto = self.endereco_posto.text;
-    self.posto.preco_gasolina= self.preco_gasolina.text;
-    self.posto.preco_diesel = self.preco_diesel.text;
-    self.posto.preco_etanol = self.preco_etanol.text;
+    self.posto.latitude_posto = self.latitude_posto.text;
+    self.posto.longitude_posto = self.longitude_posto.text;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIBarButtonItem *botao = nil;
     if (self.posto){
-        botao = [[UIBarButtonItem alloc] initWithTitle:@"Alterar" style:UIBarButtonItemStylePlain target:self action: @selector(altera)];
-        self.navigationItem.title = @"Altera Posto";
+        botao = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStylePlain target:self action: @selector(altera)];
+        self.navigationItem.title = @"Atualizar";
     } else {
-        botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action: @selector(adiciona)];
-        self.navigationItem.title = @"Novo Posto";
+        botao = [[UIBarButtonItem alloc] initWithTitle:@"Salvar" style:UIBarButtonItemStylePlain target:self action: @selector(adiciona)];
+        self.navigationItem.title = @"Cadastrar";
     }
     self.navigationItem.rightBarButtonItem = botao;
     
     if (self.posto){
-    self.nome_posto.text = self.posto.nome_posto;
-    self.bandeira_posto.text = self.posto.bandeira_posto;
-    self.endereco_posto.text = self.posto.endereco_posto;
-    self.preco_diesel.text = self.posto.preco_diesel;
-    self.preco_etanol.text = self.posto.preco_etanol;
-    self.preco_gasolina.text = self.posto.preco_gasolina;
+        self.preco_gasolina_comum.text = self.posto.preco_gasolina_comum;
+        self.preco_gasolina_aditivada.text = self.posto.preco_gasolina_aditivada;
+        self.preco_etanol.text = self.posto.preco_etanol;
+        self.preco_diesel.text = self.posto.preco_diesel;
+        self.nome_posto.text = self.posto.nome_posto;
+        self.bandeira_posto.text = self.posto.bandeira_posto;
+        self.endereco_posto.text = self.posto.endereco_posto;
+        self.latitude_posto.text = self.posto.latitude_posto;
+        self.longitude_posto.text = self.posto.longitude_posto;
+       
     }
 }
 

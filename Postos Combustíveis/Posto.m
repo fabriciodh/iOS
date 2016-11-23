@@ -10,7 +10,7 @@
 
 @implementation Posto
 -(NSString *) description {
-    NSString *dados = [NSString stringWithFormat:@"Nome: %@ Bandeira: %@ Endereço: %@ Preço Gasolina: %@ Preço Etanol: %@ Preço Diesel; %@", self.nome_posto, self.bandeira_posto, self.endereco_posto, self.preco_gasolina, self.preco_etanol, self.preco_diesel];
+    NSString *dados = [NSString stringWithFormat:@"Nome: %@ Bandeira: %@ Endereço: %@ Latitude: %@ Longitude: %@ Gasolina Comum: %@  Gasolina Aditivada: %@ Etanol: %@ Diesel; %@", self.nome_posto, self.bandeira_posto, self.endereco_posto, self.latitude_posto, self.longitude_posto, self.preco_gasolina_comum, self.preco_gasolina_aditivada, self.preco_etanol, self.preco_diesel];
 
     return dados;
     

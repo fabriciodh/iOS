@@ -11,12 +11,24 @@
 
 @interface ViewController : UIViewController
 
-@property IBOutlet UITextField *nome_posto;
-@property IBOutlet UITextField *endereco_posto;
-@property IBOutlet UITextField *bandeira_posto;
-@property IBOutlet UITextField *preco_gasolina;
-@property IBOutlet UITextField *preco_etanol;
-@property IBOutlet UITextField *preco_diesel;
+@property (weak, nonatomic) IBOutlet UITextField *preco_gasolina_comum;
+
+@property (weak, nonatomic) IBOutlet UITextField *preco_gasolina_aditivada;
+
+@property (weak, nonatomic) IBOutlet UITextField *preco_etanol;
+
+@property (weak, nonatomic) IBOutlet UITextField *preco_diesel;
+
+@property (weak, nonatomic) IBOutlet UITextField *nome_posto;
+
+@property (weak, nonatomic) IBOutlet UITextField *bandeira_posto;
+
+@property (weak, nonatomic) IBOutlet UITextField *endereco_posto;
+
+@property (weak, nonatomic) IBOutlet UILabel *latitude_posto;
+
+@property (weak, nonatomic) IBOutlet UILabel *longitude_posto;
+
 @property Posto *posto;
 
 @property PostoDAO *dao;

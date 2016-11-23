@@ -18,6 +18,7 @@
 		7FE3F6E11DDB635500B165F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE3F6E01DDB635500B165F0 /* MapKit.framework */; };
 		7FE3F6E41DDB6A3700B165F0 /* Posto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3F6E31DDB6A3700B165F0 /* Posto.m */; };
 		7FE3F6E71DDB89C300B165F0 /* ListaPostosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3F6E61DDB89C300B165F0 /* ListaPostosTableViewController.m */; };
+		EF5803F71DE63D4F00CA79D1 /* PostoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5803F61DE63D4F00CA79D1 /* PostoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		7FE3F6E31DDB6A3700B165F0 /* Posto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posto.m; sourceTree = "<group>"; };
 		7FE3F6E51DDB89C300B165F0 /* ListaPostosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaPostosTableViewController.h; sourceTree = "<group>"; };
 		7FE3F6E61DDB89C300B165F0 /* ListaPostosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaPostosTableViewController.m; sourceTree = "<group>"; };
+		EF5803F51DE63D4F00CA79D1 /* PostoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostoTableViewCell.h; sourceTree = "<group>"; };
+		EF5803F61DE63D4F00CA79D1 /* PostoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				7FE3F6C51DDB634F00B165F0 /* Supporting Files */,
 				7FA227011DDD04AF00A56974 /* PostoDAO.h */,
 				7FA227021DDD04B000A56974 /* PostoDAO.m */,
+				EF5803F51DE63D4F00CA79D1 /* PostoTableViewCell.h */,
+				EF5803F61DE63D4F00CA79D1 /* PostoTableViewCell.m */,
 			);
 			path = "Postos Combustíveis";
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				7FA227031DDD04B000A56974 /* PostoDAO.m in Sources */,
 				7FE3F6CA1DDB634F00B165F0 /* AppDelegate.m in Sources */,
 				7FE3F6C71DDB634F00B165F0 /* main.m in Sources */,
+				EF5803F71DE63D4F00CA79D1 /* PostoTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
