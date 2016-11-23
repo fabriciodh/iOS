@@ -140,6 +140,7 @@
 				TargetAttributes = {
 					7FE3F6C11DDB634F00B165F0 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Y6XNH7AXS2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -311,9 +312,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y6XNH7AXS2;
 				INFOPLIST_FILE = "Postos Combustíveis/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iesb.Postos-Combusti-veis";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.posddm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -322,9 +325,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y6XNH7AXS2;
 				INFOPLIST_FILE = "Postos Combustíveis/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iesb.Postos-Combusti-veis";
+				PRODUCT_BUNDLE_IDENTIFIER = br.iesb.posddm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
