@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bVp-df-p7Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DbP-Lb-elJ" id="xWJ-MW-gjk">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SVB-gZ-vdU">
@@ -401,12 +401,12 @@
                                 <exclude reference="tAh-Hg-olJ"/>
                                 <exclude reference="wIx-ZB-LEC"/>
                                 <exclude reference="CGL-GJ-CtE"/>
+                                <exclude reference="iu1-3Y-uHc"/>
                                 <exclude reference="GDW-dM-xSf"/>
                                 <exclude reference="gGt-Rz-jlp"/>
                                 <exclude reference="pVj-ig-SwZ"/>
                                 <exclude reference="umw-5D-PQ4"/>
                                 <exclude reference="uoY-gc-453"/>
-                                <exclude reference="iu1-3Y-uHc"/>
                                 <exclude reference="5Xq-PB-nGz"/>
                                 <exclude reference="hRj-f1-h4C"/>
                                 <exclude reference="Lma-z2-aK0"/>
@@ -432,6 +432,8 @@
                                 <include reference="CGL-GJ-CtE"/>
                                 <exclude reference="Cmu-dp-IcQ"/>
                                 <exclude reference="b6V-Ic-dga"/>
+                                <exclude reference="VXh-nP-jy1"/>
+                                <include reference="iu1-3Y-uHc"/>
                                 <exclude reference="GDW-dM-xSf"/>
                                 <exclude reference="Nfw-Yx-vDg"/>
                                 <include reference="gGt-Rz-jlp"/>
@@ -440,8 +442,6 @@
                                 <include reference="pVj-ig-SwZ"/>
                                 <include reference="umw-5D-PQ4"/>
                                 <include reference="uoY-gc-453"/>
-                                <exclude reference="VXh-nP-jy1"/>
-                                <include reference="iu1-3Y-uHc"/>
                                 <include reference="5Xq-PB-nGz"/>
                                 <exclude reference="aLF-Tv-ccd"/>
                                 <exclude reference="hRj-f1-h4C"/>
